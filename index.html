@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>7ª GEE – Situação das Escolas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<div id="modalAjuda" class="modal">
+  <div class="modal-content">
+    <span id="fecharModal" class="close">&times;</span>
+
+    <h2>💡 Dica de apresentação</h2>
+    <p>
+      Comece pelo <strong>Mapa Geral</strong>, mostrando onde estão os maiores riscos.
+      Em seguida, clique nos indicadores vermelhos para detalhar
+      <strong>qual programa</strong> e <strong>qual exercício</strong> gerou a pendência.
+    </p>
+    <p>
+      Destaque que o painel mostra <em>o problema</em> e <em>a solução objetiva</em>,
+      facilitando a tomada de decisão da Gerência.
+    </p>
+  </div>
+</div>
+
+
+<body>
+
+<header>
+  <h1>📊 Situação das Escolas – 7ª GEE</h1>
+  <p>Prestação de Contas | Exercícios 2024 e 2025.1</p>
+
+  <button id="btnAjuda" class="btn-ajuda">
+  💡 Como apresentar este painel
+</button>
+
+</header>
+
+<section class="cards">
+  <div class="card red">
+    <h2>🔴 Risco Alto</h2>
+    <p>6 escolas</p>
+  </div>
+  <div class="card yellow">
+    <h2>🟡 Risco Médio</h2>
+    <p>7 escolas</p>
+  </div>
+  <div class="card green">
+    <h2>🟢 Risco Baixo</h2>
+    <p>0 escolas</p>
+  </div>
+</section>
+
+<section class="info">
+  <h2>📌 Programas Monitorados</h2>
+  <ul>
+    <li>PDDE (ações agregadas)</li>
+    <li>PNAE</li>
+    <li>Programa Escola da Hora (PEH)</li>
+    <li>Programa Rumo às Aulas (PRA)</li>
+  </ul>
+</section>
+
+<!-- =========================
+     FILTROS (OBRIGATÓRIO)
+========================= -->
+<section class="filters">
+  <h2>🔎 Filtros de Visualização</h2>
+
+  <label>
+    Escola:
+    <select id="filterEscola"></select>
+  </label>
+
+  <label>
+    Programa:
+    <select id="filterPrograma"></select>
+  </label>
+
+  <label>
+    Exercício:
+    <select id="filterExercicio"></select>
+  </label>
+</section>
+
+<!-- =========================
+     MAPA GERAL
+========================= -->
+<section>
+  <h2>🔥 Mapa Geral – Escolas x Programas</h2>
+  <table id="mapaGeral">
+    <thead>
+      <tr>
+        <th>Escola</th>
+        <th>PDDE</th>
+        <th>PNAE</th>
+        <th>PEH</th>
+        <th>PRA</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- =========================
+     DETALHAMENTO
+========================= -->
+<section>
+  <h2>📂 Detalhamento por Escola e Exercício</h2>
+  <table id="detalhamento">
+    <thead>
+      <tr>
+        <th>Escola</th>
+        <th>Programa</th>
+        <th>Exercício</th>
+        <th>Status</th>
+        <th>Problema Identificado</th>
+        <th>O que falta para resolver</th>
+        <th>Prioridade</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<footer>
+  <p>Relatório técnico elaborado pela BRN Group Soluções Inteligentes</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
